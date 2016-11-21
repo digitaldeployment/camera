@@ -1,0 +1,15 @@
+{
+  "name": "camera",
+  "private": true,
+  "scripts": {
+    "start": "node app.js"
+  },
+  "engines": {
+    "node": "^6.8"
+  },
+  "dependencies": {
+    "bluebird": "^3.4.6",
+    "express": "^4.14.0",
+    "selenium-webdriver": "^3.0.1"
+  }
+}
