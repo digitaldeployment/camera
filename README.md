@@ -17,16 +17,16 @@ This requires Docker Compose 1.6.0+ and Docker 1.10.0+.
 Use the [example docker-compose.yml](https://github.com/digitaldeployment/camera/blob/master/docker-compose.yml) as a starting point, or clone this repo:
 
 ```bash
-$ git clone https://github.com/digitaldeployment/camera.git
-$ cd camera/
-$ docker-compose up
+git clone https://github.com/digitaldeployment/camera.git
+cd camera/
+docker-compose up
 ```
 
 ### Using straight Docker
 
 ```bash
-$ docker run -d --name selenium --expose 4444 selenium/standalone-chrome:3.0.1-aluminum
-$ docker run -d --name camera --link selenium -e SELENIUM_BROWSER=chrome -e SELENIUM_REMOTE_URL=http://selenium:4444/wd/hub -p 3000:3000 digdep/camera
+docker run -d --name selenium --expose 4444 selenium/standalone-chrome:3.0.1-aluminum
+docker run -d --name camera --link selenium -e SELENIUM_BROWSER=chrome -e SELENIUM_REMOTE_URL=http://selenium:4444/wd/hub -p 3000:3000 digdep/camera
 ```
 
 ## Taking a screenshot
